@@ -25,3 +25,15 @@ module Example(	// <stdin>:3:10
   assign out = myReg;	// <stdin>:3:10, src/main/scala/Example.scala:9:22
 endmodule
 
+
+// ----- 8< ----- FILE "metadata/tb_seq_mems.json" ----- 8< -----
+
+[]
+
+// ----- 8< ----- FILE "metadata/seq_mems.json" ----- 8< -----
+
+[]
+
+// ----- 8< ----- FILE "Example_firtool.conf" ----- 8< -----
+
+

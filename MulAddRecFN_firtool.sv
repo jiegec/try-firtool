@@ -496,3 +496,15 @@ module MulAddRecFN(	// <stdin>:835:10
   );
 endmodule
 
+
+// ----- 8< ----- FILE "metadata/tb_seq_mems.json" ----- 8< -----
+
+[]
+
+// ----- 8< ----- FILE "metadata/seq_mems.json" ----- 8< -----
+
+[]
+
+// ----- 8< ----- FILE "MulAddRecFN_firtool.conf" ----- 8< -----
+
+

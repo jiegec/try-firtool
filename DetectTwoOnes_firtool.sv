@@ -22,3 +22,15 @@ module DetectTwoOnes(	// <stdin>:3:10
   assign io_out = state == 2'h2;	// <stdin>:3:10, src/main/scala/DetectTwoOnes.scala:15:22, :17:20
 endmodule
 
+
+// ----- 8< ----- FILE "metadata/tb_seq_mems.json" ----- 8< -----
+
+[]
+
+// ----- 8< ----- FILE "metadata/seq_mems.json" ----- 8< -----
+
+[]
+
+// ----- 8< ----- FILE "DetectTwoOnes_firtool.conf" ----- 8< -----
+
+
