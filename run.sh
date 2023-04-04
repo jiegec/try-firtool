@@ -5,7 +5,6 @@ which firtool
 for folder in chisel3-5 chisel3-6;
 do
 	cd $folder
-	sbt "runMain Example"
-	sbt "runMain DetectTwoOnes"
+	sbt "runMain Example" "runMain DetectTwoOnes" "runMain Memory"
 	cd ..
 done
