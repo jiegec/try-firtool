@@ -35,4 +35,6 @@ firtool-*
 bin/
 .metals/
 .vscode/
+.bloop/
 project/
+out/
