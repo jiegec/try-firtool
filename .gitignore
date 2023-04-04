@@ -29,3 +29,9 @@ hs_err_pid*
 
 build.properties
 *.anno.json
+firrtl-bin-*
+circt-bin-*
+firtool-*
+bin/
+.metals/
+.vscode/

@@ -20,9 +20,6 @@ class Example extends Module {
 
 object Example {
   def main(args: Array[String]): Unit = {
-    val pretty = Array(
-      "--emission-options", "disableMemRandomization,disableRegisterRandomization"
-    )
-    println(getVerilogString(new Example, pretty))
+    println(circt.stage.ChiselStage.emitSystemVerilogFile(new Example))
   }
 }
