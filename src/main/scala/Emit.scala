@@ -1,7 +1,7 @@
 import chisel3._
 
 trait Emit {
-  def gen(): Module
+  def gen(): RawModule
   def name(): String
   def main(args: Array[String]): Unit = {
     val pretty = Array(

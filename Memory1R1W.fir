@@ -1,13 +1,13 @@
-circuit Memory :
-  module Memory :
+circuit Memory1R1W :
+  module Memory1R1W :
     input clock : Clock
     input reset : UInt<1>
     input raddr : UInt<5> @[src/main/scala/Memory.scala 4:17]
-    output rdata : UInt<32> @[src/main/scala/Memory.scala 5:17]
+    output rdata : UInt<64> @[src/main/scala/Memory.scala 5:17]
     input waddr : UInt<5> @[src/main/scala/Memory.scala 7:17]
-    input wdata : UInt<32> @[src/main/scala/Memory.scala 8:17]
+    input wdata : UInt<64> @[src/main/scala/Memory.scala 8:17]
 
-    smem mem : UInt<32> [32] @[src/main/scala/Memory.scala 10:24]
+    smem mem : UInt<64> [32] @[src/main/scala/Memory.scala 10:24]
     wire _rdata_WIRE : UInt @[src/main/scala/Memory.scala 11:20]
     _rdata_WIRE is invalid @[src/main/scala/Memory.scala 11:20]
     when UInt<1>("h1") : @[src/main/scala/Memory.scala 11:20]

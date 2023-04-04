@@ -38,3 +38,4 @@ bin/
 .bloop/
 project/
 out/
+mill.*
