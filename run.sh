@@ -2,9 +2,10 @@
 set -x -e
 firtool --version
 which firtool
-cd chisel3-5
-sbt "runMain Example"
-cd ..
-cd chisel3-6
-sbt "runMain Example"
-cd ..
+for folder in chisel3-5 chisel3-6;
+do
+	cd $folder
+	sbt "runMain Example"
+	sbt "runMain DetectTwoOnes"
+	cd ..
+done
