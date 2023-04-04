@@ -37,8 +37,11 @@ object hardfloat extends SbtModule {
   )
 }
 
-object tryFirtool extends ScalaModule {
+object tryFirtool extends SbtModule {
   def scalaVersion = commonScalaVersion
+
+  override def millSourcePath =
+    os.pwd
 
   override def ivyDeps = Agg(
     getVersion("chisel3")

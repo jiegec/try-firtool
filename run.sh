@@ -2,4 +2,6 @@
 set -x -e
 firtool --version
 which firtool
-sbt "runMain Example" "runMain DetectTwoOnes" "runMain Memory"
+mill tryFirtool.runMain --mainClass Example
+mill tryFirtool.runMain --mainClass DetectTwoOnes
+mill tryFirtool.runMain --mainClass Memory
