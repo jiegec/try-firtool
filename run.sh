@@ -1,5 +1,7 @@
 #!/bin/bash
-export PATH=./firtool-1.34.0/bin:$PATH
+set -x -e
+firtool --version
+which firtool
 cd chisel3-5
 sbt "runMain Example"
 cd ..
