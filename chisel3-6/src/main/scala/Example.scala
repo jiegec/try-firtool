@@ -17,12 +17,6 @@ class Example extends Module {
   }
 }
 
-object Example {
-  def main(args: Array[String]): Unit = {
-    val pretty = Array(
-      "--disable-all-randomization"
-    )
-    circt.stage.ChiselStage
-      .emitSystemVerilogFile(new Example, Array.empty, pretty)
-  }
+object Example extends Emit {
+  def gen() = new Example
 }

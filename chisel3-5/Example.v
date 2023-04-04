@@ -16,9 +16,9 @@ module Example(
   always @(posedge clock) begin
     if (reset) begin // @[Example.scala 9:22]
       myReg <= 8'h0; // @[Example.scala 9:22]
-    end else if (d & e & f) begin // @[Example.scala 15:22]
+    end else if (d & e & f) begin // @[Example.scala 15:21]
       myReg <= bar; // @[Example.scala 16:11]
-    end else if (a & b & c) begin // @[Example.scala 12:22]
+    end else if (a & b & c) begin // @[Example.scala 12:21]
       myReg <= foo; // @[Example.scala 13:11]
     end
   end

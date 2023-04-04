@@ -15,13 +15,13 @@ circuit Example :
     reg myReg : UInt<8>, clock with :
       reset => (reset, UInt<8>("h0")) @[Example.scala 9:22]
     out <= myReg @[Example.scala 10:7]
-    node _T = and(a, b) @[Example.scala 12:11]
-    node _T_1 = and(_T, c) @[Example.scala 12:16]
-    when _T_1 : @[Example.scala 12:22]
+    node _T = and(a, b) @[Example.scala 12:10]
+    node _T_1 = and(_T, c) @[Example.scala 12:15]
+    when _T_1 : @[Example.scala 12:21]
       myReg <= foo @[Example.scala 13:11]
-    node _T_2 = and(d, e) @[Example.scala 15:11]
-    node _T_3 = and(_T_2, f) @[Example.scala 15:16]
-    when _T_3 : @[Example.scala 15:22]
+    node _T_2 = and(d, e) @[Example.scala 15:10]
+    node _T_3 = and(_T_2, f) @[Example.scala 15:15]
+    when _T_3 : @[Example.scala 15:21]
       myReg <= bar @[Example.scala 16:11]
 
 
