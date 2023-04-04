@@ -14,4 +14,5 @@ class Memory extends Module {
 
 object Memory extends Emit {
   def gen() = new Memory
+  def name() = "Memory"
 }

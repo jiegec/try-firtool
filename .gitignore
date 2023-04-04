@@ -35,3 +35,4 @@ firtool-*
 bin/
 .metals/
 .vscode/
+project/

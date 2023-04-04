@@ -19,4 +19,5 @@ class Example extends Module {
 
 object Example extends Emit {
   def gen() = new Example
+  def name() = "Example"
 }

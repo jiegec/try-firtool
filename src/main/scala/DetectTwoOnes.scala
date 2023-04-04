@@ -39,4 +39,5 @@ class DetectTwoOnes extends Module {
 
 object DetectTwoOnes extends Emit {
   def gen() = new DetectTwoOnes
+  def name() = "DetectTwoOnes"
 }
