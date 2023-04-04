@@ -2,13 +2,13 @@
 module Memory1RW(	// <stdin>:3:10
   input         clock,	// <stdin>:4:11
                 reset,	// <stdin>:5:11
-  input  [4:0]  addr,	// src/main/scala/Memory.scala:21:16
-  input  [63:0] wdata,	// src/main/scala/Memory.scala:23:17
-  input         we,	// src/main/scala/Memory.scala:24:14
-  output [63:0] rdata	// src/main/scala/Memory.scala:22:17
+  input  [4:0]  addr,	// src/main/scala/Memory.scala:39:16
+  input  [63:0] wdata,	// src/main/scala/Memory.scala:41:17
+  input         we,	// src/main/scala/Memory.scala:42:14
+  output [63:0] rdata	// src/main/scala/Memory.scala:40:17
 );
 
-  mem mem (	// src/main/scala/Memory.scala:26:24
+  mem mem (	// src/main/scala/Memory.scala:44:24
     .RW0_addr  (addr),
     .RW0_clk   (clock),
     .RW0_wmode (we),
@@ -17,7 +17,7 @@ module Memory1RW(	// <stdin>:3:10
   );
 endmodule
 
-module mem(	// src/main/scala/Memory.scala:26:24
+module mem(	// src/main/scala/Memory.scala:44:24
   input  [4:0]  RW0_addr,
   input         RW0_clk,
                 RW0_wmode,
@@ -25,7 +25,7 @@ module mem(	// src/main/scala/Memory.scala:26:24
   output [63:0] RW0_rdata
 );
 
-  mem_ext mem_ext (	// src/main/scala/Memory.scala:26:24
+  mem_ext mem_ext (	// src/main/scala/Memory.scala:44:24
     .RW0_addr  (RW0_addr),
     .RW0_en    (1'h1),
     .RW0_clk   (RW0_clk),
