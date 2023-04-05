@@ -1,3 +1,4 @@
+FIRRTL version 1.2.0
 circuit Memory2RW :
   module Memory2RW :
     input clock : Clock

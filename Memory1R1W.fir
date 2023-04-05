@@ -1,3 +1,4 @@
+FIRRTL version 1.2.0
 circuit Memory1R1W :
   module Memory1R1W :
     input clock : Clock

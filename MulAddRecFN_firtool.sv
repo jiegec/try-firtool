@@ -184,11 +184,11 @@ module MulAddRecFNToRaw_postMul(	// <stdin>:207:10
                                                                                               : (|(notCDom_absSigSum[5:4]))
                                                                                                   ? 5'h17
                                                                                                   : {4'hC,
-                                                                                                     ~(|(notCDom_absSigSum[3:2]))};	// src/main/scala/chisel3/util/Mux.scala:47:70, submodules/berkeley-hardfloat/src/main/scala/MulAddRecFN.scala:232:12, submodules/berkeley-hardfloat/src/main/scala/primitives.scala:103:{33,54}, :106:15
+                                                                                                     ~(|(notCDom_absSigSum[3:2]))};	// src/main/scala/chisel3/util/Mux.scala:50:70, submodules/berkeley-hardfloat/src/main/scala/MulAddRecFN.scala:232:12, submodules/berkeley-hardfloat/src/main/scala/primitives.scala:103:{33,54}, :106:15
   wire [113:0] _notCDom_mainSig_T =
-    {63'h0, notCDom_absSigSum} << {108'h0, notCDom_normDistReduced2, 1'h0};	// src/main/scala/chisel3/util/Mux.scala:47:70, submodules/berkeley-hardfloat/src/main/scala/MulAddRecFN.scala:205:22, :232:12, :241:27
+    {63'h0, notCDom_absSigSum} << {108'h0, notCDom_normDistReduced2, 1'h0};	// src/main/scala/chisel3/util/Mux.scala:50:70, submodules/berkeley-hardfloat/src/main/scala/MulAddRecFN.scala:205:22, :232:12, :241:27
   wire [16:0]  notCDom_reduced4SigExtra_shift =
-    $signed(17'sh10000 >>> ~(notCDom_normDistReduced2[4:1]));	// src/main/scala/chisel3/util/Mux.scala:47:70, submodules/berkeley-hardfloat/src/main/scala/MulAddRecFN.scala:246:46, submodules/berkeley-hardfloat/src/main/scala/primitives.scala:52:21, :76:56
+    $signed(17'sh10000 >>> ~(notCDom_normDistReduced2[4:1]));	// src/main/scala/chisel3/util/Mux.scala:50:70, submodules/berkeley-hardfloat/src/main/scala/MulAddRecFN.scala:246:46, submodules/berkeley-hardfloat/src/main/scala/primitives.scala:52:21, :76:56
   wire         notCDom_completeCancellation = _notCDom_mainSig_T[51:50] == 2'h0;	// submodules/berkeley-hardfloat/src/main/scala/MulAddRecFN.scala:241:27, :253:{21,50}, submodules/berkeley-hardfloat/src/main/scala/primitives.scala:103:54
   wire         notNaN_isInfProd = io_fromPreMul_isInfA | io_fromPreMul_isInfB;	// submodules/berkeley-hardfloat/src/main/scala/MulAddRecFN.scala:262:49
   wire         notNaN_isInfOut = notNaN_isInfProd | io_fromPreMul_isInfC;	// submodules/berkeley-hardfloat/src/main/scala/MulAddRecFN.scala:262:49, :263:44
@@ -215,7 +215,7 @@ module MulAddRecFNToRaw_postMul(	// <stdin>:207:10
   assign io_rawOut_sExp =
     io_fromPreMul_CIsDominant
       ? io_fromPreMul_sExpSum - {9'h0, io_fromPreMul_doSubMags}
-      : io_fromPreMul_sExpSum - {4'h0, notCDom_normDistReduced2, 1'h0};	// <stdin>:207:10, src/main/scala/chisel3/util/Mux.scala:47:70, submodules/berkeley-hardfloat/src/main/scala/MulAddRecFN.scala:201:43, :205:22, :239:46, :291:26, submodules/berkeley-hardfloat/src/main/scala/primitives.scala:120:54
+      : io_fromPreMul_sExpSum - {4'h0, notCDom_normDistReduced2, 1'h0};	// <stdin>:207:10, src/main/scala/chisel3/util/Mux.scala:50:70, submodules/berkeley-hardfloat/src/main/scala/MulAddRecFN.scala:201:43, :205:22, :239:46, :291:26, submodules/berkeley-hardfloat/src/main/scala/primitives.scala:120:54
   assign io_rawOut_sig =
     io_fromPreMul_CIsDominant
       ? {_CDom_mainSig_T[49:24],

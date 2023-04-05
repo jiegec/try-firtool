@@ -1,3 +1,4 @@
+FIRRTL version 1.2.0
 circuit Example :
   module Example :
     input clock : Clock

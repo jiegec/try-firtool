@@ -4,8 +4,8 @@ import mill.scalalib.publish._
 import coursier.maven.MavenRepository
 
 val defaultVersions = Map(
-  "chisel3" -> "3.6.0-RC2",
-  "chisel3-plugin" -> "3.6.0-RC2"
+  "chisel3" -> "3.6.0-RC3",
+  "chisel3-plugin" -> "3.6.0-RC3"
 )
 
 val commonScalaVersion = "2.13.10"

@@ -1,3 +1,4 @@
+FIRRTL version 1.2.0
 circuit DetectTwoOnes :
   module DetectTwoOnes :
     input clock : Clock
