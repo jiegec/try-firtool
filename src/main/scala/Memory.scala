@@ -51,6 +51,23 @@ object Memory1R1WWriteFirst extends Emit {
   def name() = "Memory1R1WWriteFirst"
 }
 
+class Memory1R1WUndefined extends Module {
+  val raddr = IO(Input(UInt(5.W)))
+  val rdata = IO(Output(UInt(64.W)))
+
+  val waddr = IO(Input(UInt(5.W)))
+  val wdata = IO(Input(UInt(64.W)))
+
+  val mem = SyncReadMem(32, UInt(64.W), SyncReadMem.Undefined)
+  rdata := mem.read(raddr)
+  mem.write(waddr, wdata)
+}
+
+object Memory1R1WUndefined extends Emit {
+  def gen() = new Memory1R1WUndefined
+  def name() = "Memory1R1WUndefined"
+}
+
 class Memory1R1WMasked extends Module {
   val raddr = IO(Input(UInt(5.W)))
   val rdata = IO(Output(Vec(8, UInt(8.W))))

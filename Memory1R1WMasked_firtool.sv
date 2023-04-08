@@ -2,48 +2,48 @@
 module Memory1R1WMasked(	// <stdin>:3:10
   input        clock,	// <stdin>:4:11
                reset,	// <stdin>:5:11
-  input  [4:0] raddr,	// src/main/scala/Memory.scala:55:17
-               waddr,	// src/main/scala/Memory.scala:58:17
-  input  [7:0] wdata_0,	// src/main/scala/Memory.scala:59:17
-               wdata_1,	// src/main/scala/Memory.scala:59:17
-               wdata_2,	// src/main/scala/Memory.scala:59:17
-               wdata_3,	// src/main/scala/Memory.scala:59:17
-               wdata_4,	// src/main/scala/Memory.scala:59:17
-               wdata_5,	// src/main/scala/Memory.scala:59:17
-               wdata_6,	// src/main/scala/Memory.scala:59:17
-               wdata_7,	// src/main/scala/Memory.scala:59:17
-               wmask,	// src/main/scala/Memory.scala:60:17
-  output [7:0] rdata_0,	// src/main/scala/Memory.scala:56:17
-               rdata_1,	// src/main/scala/Memory.scala:56:17
-               rdata_2,	// src/main/scala/Memory.scala:56:17
-               rdata_3,	// src/main/scala/Memory.scala:56:17
-               rdata_4,	// src/main/scala/Memory.scala:56:17
-               rdata_5,	// src/main/scala/Memory.scala:56:17
-               rdata_6,	// src/main/scala/Memory.scala:56:17
-               rdata_7	// src/main/scala/Memory.scala:56:17
+  input  [4:0] raddr,	// src/main/scala/Memory.scala:72:17
+               waddr,	// src/main/scala/Memory.scala:75:17
+  input  [7:0] wdata_0,	// src/main/scala/Memory.scala:76:17
+               wdata_1,	// src/main/scala/Memory.scala:76:17
+               wdata_2,	// src/main/scala/Memory.scala:76:17
+               wdata_3,	// src/main/scala/Memory.scala:76:17
+               wdata_4,	// src/main/scala/Memory.scala:76:17
+               wdata_5,	// src/main/scala/Memory.scala:76:17
+               wdata_6,	// src/main/scala/Memory.scala:76:17
+               wdata_7,	// src/main/scala/Memory.scala:76:17
+               wmask,	// src/main/scala/Memory.scala:77:17
+  output [7:0] rdata_0,	// src/main/scala/Memory.scala:73:17
+               rdata_1,	// src/main/scala/Memory.scala:73:17
+               rdata_2,	// src/main/scala/Memory.scala:73:17
+               rdata_3,	// src/main/scala/Memory.scala:73:17
+               rdata_4,	// src/main/scala/Memory.scala:73:17
+               rdata_5,	// src/main/scala/Memory.scala:73:17
+               rdata_6,	// src/main/scala/Memory.scala:73:17
+               rdata_7	// src/main/scala/Memory.scala:73:17
 );
 
-  wire [63:0] _mem_R0_data;	// src/main/scala/Memory.scala:62:24
-  mem mem (	// src/main/scala/Memory.scala:62:24
+  wire [63:0] _mem_R0_data;	// src/main/scala/Memory.scala:79:24
+  mem mem (	// src/main/scala/Memory.scala:79:24
     .R0_addr (raddr),
     .R0_clk  (clock),
     .W0_addr (waddr),
     .W0_clk  (clock),
-    .W0_data ({wdata_7, wdata_6, wdata_5, wdata_4, wdata_3, wdata_2, wdata_1, wdata_0}),	// src/main/scala/Memory.scala:62:24
+    .W0_data ({wdata_7, wdata_6, wdata_5, wdata_4, wdata_3, wdata_2, wdata_1, wdata_0}),	// src/main/scala/Memory.scala:79:24
     .W0_mask (wmask),
     .R0_data (_mem_R0_data)
   );
-  assign rdata_0 = _mem_R0_data[7:0];	// <stdin>:3:10, src/main/scala/Memory.scala:62:24
-  assign rdata_1 = _mem_R0_data[15:8];	// <stdin>:3:10, src/main/scala/Memory.scala:62:24
-  assign rdata_2 = _mem_R0_data[23:16];	// <stdin>:3:10, src/main/scala/Memory.scala:62:24
-  assign rdata_3 = _mem_R0_data[31:24];	// <stdin>:3:10, src/main/scala/Memory.scala:62:24
-  assign rdata_4 = _mem_R0_data[39:32];	// <stdin>:3:10, src/main/scala/Memory.scala:62:24
-  assign rdata_5 = _mem_R0_data[47:40];	// <stdin>:3:10, src/main/scala/Memory.scala:62:24
-  assign rdata_6 = _mem_R0_data[55:48];	// <stdin>:3:10, src/main/scala/Memory.scala:62:24
-  assign rdata_7 = _mem_R0_data[63:56];	// <stdin>:3:10, src/main/scala/Memory.scala:62:24
+  assign rdata_0 = _mem_R0_data[7:0];	// <stdin>:3:10, src/main/scala/Memory.scala:79:24
+  assign rdata_1 = _mem_R0_data[15:8];	// <stdin>:3:10, src/main/scala/Memory.scala:79:24
+  assign rdata_2 = _mem_R0_data[23:16];	// <stdin>:3:10, src/main/scala/Memory.scala:79:24
+  assign rdata_3 = _mem_R0_data[31:24];	// <stdin>:3:10, src/main/scala/Memory.scala:79:24
+  assign rdata_4 = _mem_R0_data[39:32];	// <stdin>:3:10, src/main/scala/Memory.scala:79:24
+  assign rdata_5 = _mem_R0_data[47:40];	// <stdin>:3:10, src/main/scala/Memory.scala:79:24
+  assign rdata_6 = _mem_R0_data[55:48];	// <stdin>:3:10, src/main/scala/Memory.scala:79:24
+  assign rdata_7 = _mem_R0_data[63:56];	// <stdin>:3:10, src/main/scala/Memory.scala:79:24
 endmodule
 
-module mem(	// src/main/scala/Memory.scala:62:24
+module mem(	// src/main/scala/Memory.scala:79:24
   input  [4:0]  R0_addr,
   input         R0_clk,
   input  [4:0]  W0_addr,
@@ -53,7 +53,7 @@ module mem(	// src/main/scala/Memory.scala:62:24
   output [63:0] R0_data
 );
 
-  mem_ext mem_ext (	// src/main/scala/Memory.scala:62:24
+  mem_ext mem_ext (	// src/main/scala/Memory.scala:79:24
     .R0_addr (R0_addr),
     .R0_en   (1'h1),
     .R0_clk  (R0_clk),
